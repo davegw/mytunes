@@ -29,22 +29,14 @@
       $(function(){
         // set up model objects
         var library = new Songs(songData);
-        var appQueue;
-        if (window.localStorage['queue']) {
-            appQueue = new SongQueue(JSON.parse(window.localStorage['queue']));
-        } else {
-            appQueue = new SongQueue();
-        }
 
-        var app = new AppModel({library: library, appQueue: appQueue});
+        var app = new AppModel({library: library});
 
         // build a view for the top level of the whole app
         var appView = new AppView({model: app});
 
         // put the view onto the screen
         $('#main').append(appView.render());
-        $('table.library').before('<h3 class="category">Library</h3>');
-        $('table.queue').before('<h3 class="category">Queue</h3>');
       });
     </script>
     <div class="container-fluid">

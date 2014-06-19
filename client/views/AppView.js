@@ -27,7 +27,9 @@ var AppView = Backbone.View.extend({
     return this.$el.html([
       this.currentSongView.$el,
       this.playerView.$el,
+      $('<h3 class="category">Library</h3>'),
       this.libraryView.$el,
+      $('<h3 class="category">Queue</h3>'),
       this.songQueueView.$el
     ]);
   }
