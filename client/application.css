@@ -17,6 +17,7 @@ th {
   color: white;
   background-color: black;
   font-weight: bold;
+  text-align: center;
 }
 td {
   cursor: pointer;
@@ -32,4 +33,13 @@ h3.category {
   margin: 0 0 20px 0;
   text-align: center;
   font-weight: normal;
+}
+.upvote {
+  float: left;
+}
+.downvote {
+  float: right;
+}
+td:last-child {
+  text-align: center;
 }
