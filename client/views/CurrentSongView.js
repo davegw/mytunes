@@ -14,6 +14,6 @@ var CurrentSongView = Backbone.View.extend({
   },
 
   render: function() {
-    return this.$el.html(this.template(this.model.attributes));
+    return this.model ? this.$el.html(this.template(this.model.attributes)) : this.$el.html('');
   }
 });

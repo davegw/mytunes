@@ -13,7 +13,11 @@ var SongQueue = Songs.extend({
     }, this);
 
     this.on('unqueue', function(song){
-      this.remove(song);
+      if (this.at(0) === song) {
+        song.ended();
+      } else {
+        this.remove(song);
+      }
     }, this);
 
     this.on('ended', function(){
