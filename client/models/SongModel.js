@@ -4,27 +4,24 @@ var SongModel = Backbone.Model.extend({
   initialize: function(){
     this.set('counter', 0);
     this.set('rating', 0);
-
-    this.on('play', function () {
-      this.increment();
-    }, this);
   },
 
   play: function(){
     // Triggering an event here will also trigger the event on the collection
     this.trigger('play', this);
+    this.increment();
   },
 
   increment: function () {
-    this.set('counter' , this.get('counter')+1);
+    this.set('counter', this.get('counter')+1);
   },
 
   upvote: function () {
-    this.set('rating' , this.get('rating')+1);
+    this.set('rating', this.get('rating')+1);
   },
 
   downvote: function () {
-    this.set('rating' , this.get('rating')-1);
+    this.set('rating', this.get('rating')-1);
   },
 
   enqueue: function(){

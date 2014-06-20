@@ -1,5 +1,4 @@
 var CurrentSongView = Backbone.View.extend({
-
   initialize: function() {
   },
 
